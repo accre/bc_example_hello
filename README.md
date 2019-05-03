@@ -12,6 +12,9 @@ that can be modified to understand the workings of a Batch Connect application
 from the compute node to the browser. A simple Jupyter-like authentication scheme
 is also provided.
 
+This app was adapted from the [bc_example_jupyter](https://github.com/OSC/bc_example_jupyter)
+app from the Ohio Supercomputing Center.
+
 ## Prerequisites
 
 This Batch Connect app requires the following software be installed on the
