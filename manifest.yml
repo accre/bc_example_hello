@@ -1,0 +1,9 @@
+---
+name: Hello World
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a "Hello World" server on a compute node.
+  It is intended to be used as a simple example app to aid in
+  understanding basic app development.

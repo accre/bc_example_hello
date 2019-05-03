@@ -1,0 +1,51 @@
+# Batch Connect app configuration file
+#
+# @note Used to define the submitted cluster, title, description, and
+#   hard-coded/user-defined attributes that make up this Batch Connect app.
+---
+
+# **MUST** set cluster id here that matches cluster configuration file located
+# under /etc/ood/config/clusters.d/*.yml
+# @example Use the ACCRE cluster at Vanderbilt University
+#     cluster: "accre"
+cluster: "accre"
+
+# Define attribute values that aren't meant to be modified by the user within
+# the Dashboard form
+attributes:
+
+  bc_account: null
+  bc_queue: null
+  bc_num_slots: null
+  bc_num_hours:
+    value: 48
+  bc_mem:
+    label: "Maximum Memory (GB)"
+    value: 4
+  bc_num_cores:
+    label: "Number of CPU Cores"
+    value: 1
+  special_message:
+    label: "Special Message" 
+    help: "Additional message to be displayed by the server"
+    widget: "text_field"
+    value: "Apps are fun!"
+ 
+
+# All of the attributes that make up the Dashboard form (in respective order),
+# and made available to the submit configuration file and the template ERB
+# files
+#
+# @note You typically do not need to modify this unless you want to add a new
+#   configurable value
+# @note If an attribute listed below is hard-coded above in the `attributes`
+#   option, then it will not appear in the form page that the user sees in the
+#   Dashboard
+form:
+  - bc_account
+  - bc_queue
+  - bc_num_hours
+  - bc_mem
+  - bc_num_cores
+  - bc_num_slots
+  - special_message
